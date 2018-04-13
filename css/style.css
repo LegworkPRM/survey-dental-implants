@@ -132,7 +132,8 @@
   font-size: 1.15em;
   width: 80%;
 }
-.legwork-survey-container .checkmark {
+.legwork-survey-container .checkmark,
+.legwork-survey-container .checkmark-type-2 {
   display: block;
   margin-right: 20px;
   width: 17px;
@@ -143,7 +144,8 @@
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
 }
-.legwork-survey-container .checkmark:after {
+.legwork-survey-container .checkmark:after,
+.legwork-survey-container .checkmark-type-2:after {
   display: block;
   content: '';
   background-image: none;
