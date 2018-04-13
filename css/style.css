@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+.legwork-survey-container {
+  font-family: 'Lato', sans-serif;
+  width: 90%;
+  padding: 50px 5%;
+}
+.legwork-survey-container h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+  color: #44a8de;
+}
+.legwork-survey-container h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 10px 0 35px 0;
+  color: #374851;
+}
+.legwork-survey-container h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 15px 0;
+  color: #617d8a;
+}
+.legwork-survey-container h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #d3d3d3;
+  line-height: 100%;
+  margin: 5px 0;
+}
+.legwork-survey-container h5 {
+  font-size: .9em;
+  font-weight: 700;
+  color: #d3d3d3;
+  line-height: 100%;
+  letter-spacing: .5px;
+  margin: 40px 0 40px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.legwork-survey-container p,
+.legwork-survey-container span {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 10px 0;
+  color: #617d8a;
+}
+.legwork-survey-container .row {
+  display: block;
+  padding: 75px 0;
+}
+.legwork-survey-container .radio input[type="radio"] {
+  margin: 15px 20px 15px 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+}
+.legwork-survey-container .radio input[type="radio"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 2px solid rgba(68, 168, 222, 0.5);
+  background-color: #fff;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  transition: inherit;
+}
+.legwork-survey-container .radio input[type="radio"]::after {
+  opacity: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #44a8de;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  transition: inherit;
+}
+.legwork-survey-container .radio input[type="radio"]:checked::before {
+  border: 2px solid #44a8de;
+}
+.legwork-survey-container .radio input[type="radio"]:checked::after {
+  opacity: 1;
+}
+.legwork-survey-container .radio span {
+  font-size: 1.15em;
+}
+.legwork-survey-container .yes-no {
+  width: 130px;
+  display: inline-block;
+  padding: 7px 0;
+  border-radius: 50px;
+  margin-right: 10px;
+  border: 2px solid #d3d3d3;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+}
+.legwork-survey-container .yes-no p {
+  margin: 0;
+  color: #d3d3d3;
+  text-align: center;
+  position: relative;
+  transition: inherit;
+}
+.legwork-survey-container .yes-no-clicked {
+  background-color: #44a8de;
+  border: 2px solid #44a8de;
+}
+.legwork-survey-container .yes-no-clicked p {
+  color: #fff;
+}
+.legwork-survey-container .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  margin: 15px 0;
+}
+.legwork-survey-container .option p {
+  display: block;
+  font-size: 1.15em;
+  width: 80%;
+}
+.legwork-survey-container .checkmark {
+  display: block;
+  margin-right: 20px;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border: 2px solid rgba(68, 168, 222, 0.5);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+}
+.legwork-survey-container .checkmark:after {
+  display: block;
+  content: '';
+  background-image: none;
+  background-size: .9em;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: inherit;
+}
+.legwork-survey-container .checkmark-clicked {
+  background-color: #44a8de;
+  border: 2px solid #44a8de;
+}
+.legwork-survey-container .checkmark-clicked:after {
+  background-image: url('https://github.com/LegworkPRM/images/blob/master/checkmark.png?raw=true');
+}
+.legwork-survey-container .svg-selection-options {
+  display: block;
+  width: 100%;
+}
+.legwork-survey-container .option-container,
+.legwork-survey-container .option-container-type-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  padding: 0 2.5% 0 2.5%;
+  box-shadow: 5px 5px 10px 0px rgba(46, 61, 73, 0.025);
+  border-radius: 5px;
+  margin: 20px 0;
+  height: 235px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+}
+.legwork-survey-container .option-container h5,
+.legwork-survey-container .option-container-type-2 h5 {
+  position: relative;
+  transition: inherit;
+}
+.legwork-survey-container .option-container svg,
+.legwork-survey-container .option-container-type-2 svg {
+  display: block;
+  position: relative;
+  max-width: 250px;
+  margin: 0 auto;
+  transition: inherit;
+}
+.legwork-survey-container .option-container:hover,
+.legwork-survey-container .option-container-type-2:hover {
+  box-shadow: 5px 5px 60px 0px rgba(46, 61, 73, 0.15);
+}
+.legwork-survey-container .option-container-clicked,
+.legwork-survey-container .option-container-type-2-clicked {
+  box-shadow: 5px 5px 60px 0px rgba(46, 61, 73, 0.15);
+}
+.legwork-survey-container .option-container-clicked h5,
+.legwork-survey-container .option-container-type-2-clicked h5 {
+  color: #44a8de;
+}
+.legwork-survey-container .option-container-clicked svg .cls-1,
+.legwork-survey-container .option-container-type-2-clicked svg .cls-1,
+.legwork-survey-container .option-container-clicked svg .cls-2,
+.legwork-survey-container .option-container-type-2-clicked svg .cls-2 {
+  stroke: #44a8de;
+}
+.legwork-survey-container .submit-info-cta h2 {
+  margin-bottom: 0;
+}
+.legwork-survey-container .submit-info-cta p {
+  margin-bottom: 35px;
+}
+.legwork-survey-container .submit-info-cta .fsBody {
+  padding: 0;
+  margin: 0;
+}
+.legwork-survey-container .submit-info-cta .fsBody form {
+  padding: 0;
+}
+.legwork-survey-container .submit-info-cta .fsNameFirst input,
+.legwork-survey-container .submit-info-cta .fsNameLast input,
+.legwork-survey-container .submit-info-cta .fsLastRow input {
+  cursor: auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+}
+.legwork-survey-container .submit-info-cta .fsNameFirst input:focus,
+.legwork-survey-container .submit-info-cta .fsNameLast input:focus,
+.legwork-survey-container .submit-info-cta .fsLastRow input:focus {
+  border: 1px solid #44a8de;
+  box-shadow: none;
+}
+.legwork-survey-container .submit-info-cta .fsPagination {
+  text-align: left;
+}
+.legwork-survey-container .submit-info-cta .fsSubmit input.fsSubmitButton {
+  background-color: #44a8de !important;
+  border-radius: 50px !important;
+  padding: 12px 45px;
+  font-size: 1.1em !important;
+  box-shadow: 0 10px 60px rgba(69, 91, 100, 0.35);
+  margin-top: 25px;
+  font-weight: 300;
+  transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+  outline: none;
+}
+.legwork-survey-container .submit-info-cta .fsSubmit input.fsSubmitButton:hover {
+  box-shadow: 0 5px 20px rgba(69, 91, 100, 0.2);
+}
+@media screen and (min-width: 1000px) {
+  .legwork-survey-container {
+    width: 950px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .legwork-survey-container .svg-selection-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .legwork-survey-container .option-container,
+  .legwork-survey-container .option-container-type-2 {
+    max-width: 30%;
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .legwork-survey-container {
+    width: 1150px;
+  }
+  .legwork-survey-container h1 {
+    font-size: 3.3em;
+  }
+  .legwork-survey-container h2 {
+    font-size: 1.8em;
+  }
+  .legwork-survey-container h3 {
+    font-size: 1.5em;
+  }
+  .legwork-survey-container .row {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .legwork-survey-container {
+    width: 1300px;
+  }
+}

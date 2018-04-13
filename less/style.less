@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+// Color variables
+@white: #fff;
+@lw-off-white: #f1f3f4;
+@lw-indigo: #44a8de;
+@lw-light-indigo: rgba(68, 168, 222, 0.5);
+@lw-blue: #455b64;
+@lw-gravel-blue: #374851;
+@lw-light-gray: #d3d3d3;
+@lw-steel-blue: #617d8a;
+
+// Wrapped for easier integration
+.legwork-survey-container {
+  font-family: 'Lato', sans-serif;
+  width: 90%;
+  padding: 50px 5%;
+  
+  // Type
+  h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+    color: @lw-indigo;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 10px 0 35px 0;
+    color: @lw-gravel-blue;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 15px 0;
+    color: @lw-steel-blue;
+  }
+  
+  h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: @lw-light-gray;
+    line-height: 100%;
+    margin: 5px 0;
+  }
+  
+  h5 {
+    font-size: .9em;
+    font-weight: 700;
+    color: #d3d3d3;
+    line-height: 100%;
+    letter-spacing: .5px;
+    margin: 40px 0 40px 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  p, span {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 10px 0;
+    color: @lw-steel-blue;
+  }
+  
+  // Rows - question containers
+  .row {
+    display: block;
+    padding: 75px 0;
+  }
+  
+  // Radio buttons
+  .radio {
+    input[type="radio"] {     
+      margin: 15px 20px 15px 0;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+      
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border: 2px solid @lw-light-indigo;
+        background-color: @white;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        // inherit parent transition
+        transition: inherit;
+      }
+      
+      &::after {
+        opacity: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: @lw-indigo;
+        border-radius: 50px;
+        width: 18px;
+        height: 18px;
+        // inherit parent transition
+        transition: inherit;
+      }
+      
+      &:checked {
+        
+        &::before {
+          border: 2px solid @lw-indigo;
+        }
+        
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    
+    span {
+      font-size: 1.15em;
+    }
+  }
+  
+  // Yes-No buttons
+  .yes-no {
+    width: 130px;
+    display: inline-block;
+    padding: 7px 0;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: 2px solid @lw-light-gray;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+    // Restyle p tag within buttons
+    p {
+      margin: 0;
+      color: @lw-light-gray;
+      text-align: center;
+      position: relative;
+      // Set the transition to inherit from its parent
+      transition: inherit;
+    }
+  }
+  
+  // Class added to button when clicked
+  .yes-no-clicked {
+    background-color: @lw-indigo;
+    border: 2px solid @lw-indigo;
+    p {
+      color: @white;
+    }
+  }
+  
+  // Checkmarks
+  .option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    margin: 15px 0;
+    
+    p {
+      display: block;
+      font-size: 1.15em;
+      width: 80%;
+    }
+  }
+ 
+  .checkmark {
+    display: block;
+    margin-right: 20px;
+    width: 17px;
+    height: 17px;
+    background-color: @white;
+    border: 2px solid @lw-light-indigo;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
+    
+    // Checkmark icon
+    &:after {
+      display: block;
+      content: '';
+      background-image: none;
+      background-size: .9em;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      // Set the transition to inherit from its parent
+      transition: inherit;
+    }
+  }
+  
+  // Class toggled when checkmark is clicked
+  .checkmark-clicked {
+    background-color: @lw-indigo;
+    border: 2px solid @lw-indigo;
+    
+    // Add checkmark png when clicked
+    &:after {
+      background-image: url('https://github.com/LegworkPRM/images/blob/master/checkmark.png?raw=true');
+    }
+  }
+  
+  // Options - SVGs
+  .svg-selection-options {
+    display: block;
+    width: 100%;
+  }
+  
+  // Container that holds SVG and description
+  .option-container, .option-container-type-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    padding: 0 2.5% 0 2.5%;
+    box-shadow: 5px 5px 10px 0px rgba(46,61,73,.025);
+    border-radius: 5px;
+    margin: 20px 0;
+    height: 235px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+    
+    h5 {
+      position: relative;
+      // Set the transition to inherit from its parent
+      transition: inherit;
+    }
+
+    svg {
+      display: block;
+      position: relative;
+      max-width: 250px;
+      margin: 0 auto;
+      // Set the transition to inherit from its parent
+      transition: inherit;
+    }
+  }
+  
+  .option-container:hover, .option-container-type-2:hover {
+    box-shadow: 5px 5px 60px 0px rgba(46,61,73,.15);
+  }
+  
+  // Class to be applied when an .option-container is clicked on
+  .option-container-clicked, .option-container-type-2-clicked {
+    box-shadow: 5px 5px 60px 0px rgba(46,61,73,.15);
+    
+    h5 {
+      color: #44a8de;
+    }
+    
+    svg .cls-1, svg .cls-2 {
+      stroke: #44a8de;
+    }
+  }
+  
+  // Submit info form
+  .submit-info-cta {
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 35px;
+    }
+    
+    // Remove padding from the formstack body
+    .fsBody {
+      padding: 0;
+      margin: 0;
+      form {
+        padding: 0;
+      }
+    }
+    
+    // Restyle input fields
+    .fsNameFirst, .fsNameLast, .fsLastRow {
+      input {
+        cursor: auto;
+        border: 1px solid #d3d3d3;
+        border-radius: 3px;
+        padding: 5px 10px;
+        outline: none;
+        transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+        
+        &:focus {
+          border: 1px solid @lw-indigo;
+          box-shadow: none;
+        }
+      }
+    }
+    
+    // Restyle submit button
+    // Align button to left
+    .fsPagination {
+      text-align: left;
+    }
+    // Change button styling
+    .fsSubmit {
+      input.fsSubmitButton { 
+        background-color: @lw-indigo !important;
+        border-radius: 50px !important;
+        padding: 12px 45px;
+        font-size: 1.1em !important;
+        box-shadow: 0 10px 60px rgba(69,91,100,0.35);
+        margin-top: 25px;
+        font-weight: 300;
+        transition: all 0.3s cubic-bezier(0.23, 0.85, 1, 1);
+        outline: none;
+        
+        &:hover {
+          box-shadow: 0 5px 20px rgba(69,91,100,0.2);
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .legwork-survey-container {
+    // set the survey width to 950px
+    width: 950px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+    // three column options
+    .svg-selection-options {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    // set equal widths
+    .option-container, .option-container-type-2 {
+      max-width: 30%;
+      padding: 0 15px;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .legwork-survey-container {
+    width: 1150px;
+    
+    h1 {
+      font-size: 3.3em;
+    }
+    
+    h2 {
+      font-size: 1.8em;
+    }
+    
+    h3 {
+      font-size: 1.5em;;
+    }
+    
+    .row {
+      padding-bottom: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .legwork-survey-container {
+    width: 1300px;
+  }
+}
