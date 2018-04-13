@@ -1,54 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 .legwork-survey-container {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif !important;
   width: 90%;
   padding: 50px 5%;
 }
+.legwork-survey-container * {
+  box-sizing: unset;
+}
 .legwork-survey-container h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-  line-height: 120%;
-  margin: 0;
-  color: #44a8de;
+  font-size: 2.5em  !important;
+  font-weight: 700  !important;
+  line-height: 120%  !important;
+  margin: 0  !important;
+  color: #44a8de !important;
 }
 .legwork-survey-container h2 {
-  font-size: 1.5em;
-  font-weight: 700;
-  line-height: 120%;
-  margin: 10px 0 35px 0;
-  color: #374851;
+  font-size: 1.5em  !important;
+  font-weight: 700  !important;
+  line-height: 120%  !important;
+  margin: 10px 0 35px 0  !important;
+  color: #374851 !important;
 }
 .legwork-survey-container h3 {
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 150%;
-  margin: 15px 0;
-  color: #617d8a;
+  font-size: 1.2em !important;
+  font-weight: 400 !important;
+  line-height: 150% !important;
+  margin: 15px 0 !important;
+  color: #617d8a !important;
 }
 .legwork-survey-container h4 {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: #d3d3d3;
-  line-height: 100%;
-  margin: 5px 0;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
+  color: #d3d3d3 !important;
+  line-height: 100% !important;
+  margin: 5px 0 !important;
 }
 .legwork-survey-container h5 {
-  font-size: .9em;
-  font-weight: 700;
-  color: #d3d3d3;
-  line-height: 100%;
-  letter-spacing: .5px;
-  margin: 40px 0 40px 0;
-  text-transform: uppercase;
-  text-align: center;
+  font-size: .9em !important;
+  font-weight: 700 !important;
+  color: #d3d3d3 !important;
+  line-height: 100% !important;
+  letter-spacing: .5px !important;
+  margin: 40px 0 40px 0 !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
 }
 .legwork-survey-container p,
 .legwork-survey-container span {
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 120%;
-  margin: 10px 0;
-  color: #617d8a;
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  line-height: 120% !important;
+  margin: 10px 0 !important;
+  color: #617d8a !important;
 }
 .legwork-survey-container .row {
   display: block;
@@ -92,7 +95,7 @@
   opacity: 1;
 }
 .legwork-survey-container .radio span {
-  font-size: 1.15em;
+  font-size: 1.15em !important;
 }
 .legwork-survey-container .yes-no {
   width: 130px;
@@ -107,10 +110,10 @@
   transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
 }
 .legwork-survey-container .yes-no p {
-  margin: 0;
-  color: #d3d3d3;
-  text-align: center;
-  position: relative;
+  margin: 0 !important;
+  color: #d3d3d3 !important;
+  text-align: center !important;
+  position: relative !important;
   transition: inherit;
 }
 .legwork-survey-container .yes-no-clicked {
@@ -118,7 +121,7 @@
   border: 2px solid #44a8de;
 }
 .legwork-survey-container .yes-no-clicked p {
-  color: #fff;
+  color: #fff !important;
 }
 .legwork-survey-container .option {
   display: flex;
@@ -129,7 +132,7 @@
 }
 .legwork-survey-container .option p {
   display: block;
-  font-size: 1.15em;
+  font-size: 1.15em !important;
   width: 80%;
 }
 .legwork-survey-container .checkmark,
@@ -206,7 +209,7 @@
 }
 .legwork-survey-container .option-container-clicked h5,
 .legwork-survey-container .option-container-type-2-clicked h5 {
-  color: #44a8de;
+  color: #44a8de !important;
 }
 .legwork-survey-container .option-container-clicked svg .cls-1,
 .legwork-survey-container .option-container-type-2-clicked svg .cls-1,
@@ -215,10 +218,10 @@
   stroke: #44a8de;
 }
 .legwork-survey-container .submit-info-cta h2 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .legwork-survey-container .submit-info-cta p {
-  margin-bottom: 35px;
+  margin-bottom: 35px !important;
 }
 .legwork-survey-container .submit-info-cta .fsBody {
   padding: 0;
@@ -226,6 +229,10 @@
 }
 .legwork-survey-container .submit-info-cta .fsBody form {
   padding: 0;
+}
+.legwork-survey-container .submit-info-cta .fsFieldFocused:not(.fsValidationError).fsSpan100 {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .legwork-survey-container .submit-info-cta .fsNameFirst input,
 .legwork-survey-container .submit-info-cta .fsNameLast input,
@@ -264,7 +271,7 @@
   .legwork-survey-container {
     width: 950px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 100px 0 50px 0;
   }
   .legwork-survey-container .svg-selection-options {
     display: flex;
@@ -284,13 +291,13 @@
     width: 1150px;
   }
   .legwork-survey-container h1 {
-    font-size: 3.3em;
+    font-size: 3.3em !important;
   }
   .legwork-survey-container h2 {
-    font-size: 1.8em;
+    font-size: 1.8em !important;
   }
   .legwork-survey-container h3 {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .legwork-survey-container .row {
     padding-bottom: 150px;

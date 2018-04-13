@@ -12,60 +12,63 @@
 
 // Wrapped for easier integration
 .legwork-survey-container {
-  font-family: 'Lato', sans-serif;
+  * {
+    box-sizing: unset;
+  }
+  font-family: 'Lato', sans-serif !important;
   width: 90%;
   padding: 50px 5%;
   
   // Type
   h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    line-height: 120%;
-    margin: 0;
-    color: @lw-indigo;
+    font-size: 2.5em  !important;
+    font-weight: 700  !important;
+    line-height: 120%  !important;
+    margin: 0  !important;
+    color: @lw-indigo  !important;
   }
   
   h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 120%;
-    margin: 10px 0 35px 0;
-    color: @lw-gravel-blue;
+    font-size: 1.5em  !important;
+    font-weight: 700  !important;
+    line-height: 120%  !important;
+    margin: 10px 0 35px 0  !important;
+    color: @lw-gravel-blue  !important;
   }
   
   h3 {
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 150%;
-    margin: 15px 0;
-    color: @lw-steel-blue;
+    font-size: 1.2em !important;
+    font-weight: 400 !important;
+    line-height: 150% !important;
+    margin: 15px 0 !important;
+    color: @lw-steel-blue !important;
   }
   
   h4 {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: @lw-light-gray;
-    line-height: 100%;
-    margin: 5px 0;
+    font-size: 1.2em !important;
+    font-weight: 700 !important;
+    color: @lw-light-gray !important;
+    line-height: 100% !important;
+    margin: 5px 0 !important;
   }
   
   h5 {
-    font-size: .9em;
-    font-weight: 700;
-    color: #d3d3d3;
-    line-height: 100%;
-    letter-spacing: .5px;
-    margin: 40px 0 40px 0;
-    text-transform: uppercase;
-    text-align: center;
+    font-size: .9em !important;
+    font-weight: 700 !important;
+    color: #d3d3d3 !important;
+    line-height: 100% !important;
+    letter-spacing: .5px !important;
+    margin: 40px 0 40px 0 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
   }
   
   p, span {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 120%;
-    margin: 10px 0;
-    color: @lw-steel-blue;
+    font-size: 1em !important;
+    font-weight: 400 !important;
+    line-height: 120% !important;
+    margin: 10px 0 !important;
+    color: @lw-steel-blue !important;
   }
   
   // Rows - question containers
@@ -124,7 +127,7 @@
     }
     
     span {
-      font-size: 1.15em;
+      font-size: 1.15em !important;
     }
   }
   
@@ -142,10 +145,10 @@
     transition: all 0.2s cubic-bezier(0.23, 0.85, 1, 1);
     // Restyle p tag within buttons
     p {
-      margin: 0;
-      color: @lw-light-gray;
-      text-align: center;
-      position: relative;
+      margin: 0 !important;
+      color: @lw-light-gray !important;
+      text-align: center !important;
+      position: relative !important;
       // Set the transition to inherit from its parent
       transition: inherit;
     }
@@ -156,7 +159,7 @@
     background-color: @lw-indigo;
     border: 2px solid @lw-indigo;
     p {
-      color: @white;
+      color: @white !important;
     }
   }
   
@@ -170,7 +173,7 @@
     
     p {
       display: block;
-      font-size: 1.15em;
+      font-size: 1.15em !important;
       width: 80%;
     }
   }
@@ -259,7 +262,7 @@
     box-shadow: 5px 5px 60px 0px rgba(46,61,73,.15);
     
     h5 {
-      color: #44a8de;
+      color: #44a8de !important;
     }
     
     svg .cls-1, svg .cls-2 {
@@ -270,10 +273,10 @@
   // Submit info form
   .submit-info-cta {
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
     p {
-      margin-bottom: 35px;
+      margin-bottom: 35px !important;
     }
     
     // Remove padding from the formstack body
@@ -283,6 +286,12 @@
       form {
         padding: 0;
       }
+    }
+    
+    // Remove padding and margin glitch when input is in a focused state
+    .fsFieldFocused:not(.fsValidationError).fsSpan100 {
+      margin: 0 !important;
+      padding: 0 !important;
     }
     
     // Restyle input fields
@@ -334,7 +343,7 @@
     // set the survey width to 950px
     width: 950px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 100px 0 50px 0;
     
     // three column options
     .svg-selection-options {
@@ -358,15 +367,15 @@
     width: 1150px;
     
     h1 {
-      font-size: 3.3em;
+      font-size: 3.3em !important;
     }
     
     h2 {
-      font-size: 1.8em;
+      font-size: 1.8em !important;
     }
     
     h3 {
-      font-size: 1.5em;;
+      font-size: 1.5em !important;
     }
     
     .row {
