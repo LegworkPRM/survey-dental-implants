@@ -254,6 +254,8 @@
   text-align: left;
 }
 .legwork-survey-container .submit-info-cta .fsSubmit input.fsSubmitButton {
+  display: inline-block;
+  width: auto;
   background-color: #44a8de !important;
   border-radius: 50px !important;
   padding: 12px 45px;
